@@ -87,13 +87,7 @@ export default function HomeScreen() {
         router.push('/explore');
     };
 
-    const getMoodInfo = () => {
-        if (progress >= 0.8) return { emoji: '😌', text: 'FEELING MINDFUL TODAY' };
-        if (progress >= 0.5) return { emoji: '😊', text: 'FEELING ACCOMPLISHED' };
-        if (progress > 0) return { emoji: '🙂', text: 'STAYING STEADY' };
-        return { emoji: '🌟', text: 'READY TO START' };
-    };
-    const mood = getMoodInfo();
+
 
     return (
         <SafeAreaView style={[styles.container, { backgroundColor: theme.background }]}>
@@ -110,6 +104,7 @@ export default function HomeScreen() {
                         </View>
                         <TouchableOpacity
                             style={[styles.circleBtn, { backgroundColor: isDark ? theme.surface : '#FFFFFF' }]}
+                            onPress={() => router.push('/notifications')}
                         >
                             <Bell size={20} color={theme.text} />
                         </TouchableOpacity>
@@ -366,31 +361,10 @@ export default function HomeScreen() {
                         )}
                     </View>
 
-                    {/* Mood Section */}
-                    {activeTab === 'habits' && (
-                        <Animated.View entering={FadeInDown.delay(400)} style={styles.moodSection}>
-                            <View style={[styles.moodCircle, { backgroundColor: isDark ? 'rgba(59, 130, 246, 0.1)' : '#F0F9FF' }]}>
-                                <View style={styles.illustration}>
-                                    <View style={[styles.moodWave, { borderColor: theme.primary + '80' }]} />
-                                    <View style={styles.moodEyes}>
-                                        <View style={[styles.eye, { backgroundColor: theme.text }]} />
-                                        <View style={[styles.eye, { backgroundColor: theme.text }]} />
-                                    </View>
-                                    <View style={[styles.moodMouth, { borderColor: theme.text }]} />
-                                </View>
-                            </View>
-                            <Text style={[styles.moodLabel, { color: theme.textSecondary }]}>{mood.text}</Text>
-                        </Animated.View>
-                    )}
 
-                    {/* Ad Section */}
-                    <View style={styles.adBanner}>
-                        <Text style={[styles.adText, { color: theme.textSecondary }]}>
-                            SPONSORED: NEW WELLNESS RETREATS NEAR YOU • <Text style={{ color: theme.primary }}>LEARN MORE</Text>
-                        </Text>
-                    </View>
 
-                    <View style={{ height: 160 }} />
+
+                    <View style={{ height: 60 }} />
                     {/* Ads Section */}
                     <View style={styles.adContainer}>
                         <AdsService.Banner />

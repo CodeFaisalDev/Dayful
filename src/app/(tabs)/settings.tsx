@@ -159,6 +159,7 @@ export default function SettingsScreen() {
                 {/* Footer */}
                 <View style={styles.footer}>
                     <Text style={[styles.version, { color: theme.textSecondary }]}>Version 1.0.0</Text>
+                    <Text style={[styles.appName, { color: theme.textSecondary }]}>Dayful by Axion Square</Text>
                     <View style={styles.madeWith}>
                         <Text style={[styles.madeWithText, { color: theme.textSecondary }]}>Made with</Text>
                         <Heart size={14} color="#EF4444" fill="#EF4444" />
@@ -262,6 +263,11 @@ const styles = StyleSheet.create({
     version: {
         fontSize: 13,
         fontFamily: 'PlusJakartaSans_500Medium',
+    },
+    appName: {
+        fontSize: 14,
+        fontFamily: 'PlusJakartaSans_700Bold',
+        marginTop: 4,
     },
     madeWith: {
         flexDirection: 'row',

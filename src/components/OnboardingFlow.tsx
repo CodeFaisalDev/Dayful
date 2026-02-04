@@ -144,7 +144,7 @@ export const OnboardingFlow = ({ isVisible, onComplete }: OnboardingFlowProps) =
                     {step === 'start' && (
                         <Animated.View entering={FadeIn} style={styles.stepContent}>
                             <View style={styles.logoContainer}>
-                                <Image source={require('../../assets/logo.jpg')} style={styles.finalLogo} />
+                                <Image source={require('../../assets/logo.png')} style={styles.finalLogo} />
                             </View>
                             <Text style={[styles.title, { color: theme.text }]}>Ready to roll, {name}!</Text>
                             <Text style={[styles.subtitle, { color: theme.textSecondary }]}>

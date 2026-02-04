@@ -21,7 +21,7 @@ export default function AboutScreen() {
             <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
                 <View style={styles.logoSection}>
                     <View style={styles.logoContainer}>
-                        <Image source={require('../../../assets/logo.jpg')} style={styles.logo} />
+                        <Image source={require('../../../assets/logo.png')} style={styles.logo} />
                     </View>
                     <Text style={[styles.appName, { color: theme.text }]}>Dayful</Text>
                     <Text style={[styles.version, { color: theme.textSecondary }]}>Version 1.0.0 (Build 20260204)</Text>

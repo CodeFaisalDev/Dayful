@@ -17,17 +17,8 @@ const AD_UNITS = {
     appOpen: 'ca-app-pub-9134194923528949/3986934041'
 };
 
-// Use TestIds if in development
+// Use production IDs
 const UNIT_ID = (type: keyof typeof AD_UNITS) => {
-    if (__DEV__) {
-        switch (type) {
-            case 'banner': return TestIds.BANNER;
-            case 'interstitial': return TestIds.INTERSTITIAL;
-            case 'rewarded': return TestIds.REWARDED;
-            case 'appOpen': return 'ca-app-pub-3940256099942544/3419835294'; // Hardcoded Test ID for safety
-            default: return TestIds.BANNER;
-        }
-    }
     return AD_UNITS[type];
 };
 

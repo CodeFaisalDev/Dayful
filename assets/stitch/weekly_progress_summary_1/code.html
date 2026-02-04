@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dayful - Weekly Progress Summary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4ade80",
+                        "soft-blue": "#E0F2FE",
+                        "soft-green": "#DCFCE7",
+                        "accent-blue": "#0EA5E9",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+        :root {
+            --chart-color: #0EA5E9;
+        }
+    </style>
+<style>
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden max-w-md mx-auto">
+<div class="flex items-center bg-transparent p-6 pb-2 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-sm">
+<span class="material-symbols-outlined cursor-pointer text-xl">arrow_back_ios_new</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Weekly Summary</h2>
+</div>
+<div class="p-4 pt-6">
+<div class="bg-white dark:bg-slate-900 rounded-[2rem] p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-slate-900 dark:text-white text-xl font-extrabold">Activity</p>
+<p class="text-slate-400 text-xs font-medium">May 12 - 18</p>
+</div>
+<div class="flex items-center gap-1 bg-soft-green px-3 py-1 rounded-full">
+<span class="text-primary text-[10px] font-bold">●</span>
+<span class="text-primary text-xs font-bold">82% Daily avg</span>
+</div>
+</div>
+<div class="relative h-32 w-full mb-4">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 400 100">
+<path d="M0,80 Q50,20 100,50 T200,30 T300,70 T400,40" fill="none" stroke="url(#gradient)" stroke-linecap="round" stroke-width="4"></path>
+<defs>
+<linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#4ade80;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1"></stop>
+</linearGradient>
+</defs>
+<circle cx="100" cy="50" fill="#4ade80" r="4"></circle>
+<circle cx="200" cy="30" fill="#0ea5e9" r="4"></circle>
+</svg>
+<div class="flex justify-between mt-2 px-1">
+<span class="text-[10px] font-bold text-slate-400">M</span>
+<span class="text-[10px] font-bold text-slate-400">T</span>
+<span class="text-[10px] font-bold text-slate-400">W</span>
+<span class="text-[10px] font-bold text-slate-400">T</span>
+<span class="text-[10px] font-bold text-slate-400">F</span>
+<span class="text-[10px] font-bold text-slate-400 text-primary">S</span>
+<span class="text-[10px] font-bold text-slate-400">S</span>
+</div>
+</div>
+</div>
+</div>
+<h3 class="text-slate-900 dark:text-white tracking-tight text-xl font-extrabold px-6 pt-4">Insights</h3>
+<div class="grid grid-cols-2 gap-4 p-4">
+<div class="flex flex-col gap-3 rounded-[2rem] p-6 bg-slate-900 dark:bg-slate-800 col-span-2 text-white shadow-lg relative overflow-hidden">
+<div class="flex items-center justify-between z-10">
+<p class="text-slate-300 text-sm font-medium">Current Streak</p>
+<div class="size-8 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-400 text-lg" style="font-variation-settings: 'FILL' 1">local_fire_department</span>
+</div>
+</div>
+<div class="z-10">
+<p class="text-4xl font-extrabold leading-tight">12 Days</p>
+<p class="text-primary text-xs font-bold mt-1">Keep it up, Paul! ✨</p>
+</div>
+<div class="absolute -right-4 -bottom-4 size-24 bg-primary/20 rounded-full blur-2xl"></div>
+</div>
+<div class="flex flex-col gap-2 rounded-[2rem] p-6 bg-soft-blue border border-sky-100 dark:bg-slate-800/40 dark:border-slate-800">
+<p class="text-slate-600 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Total Done</p>
+<div class="flex items-end gap-1">
+<p class="text-slate-900 dark:text-white text-3xl font-extrabold">84</p>
+<span class="text-accent-blue text-xs font-bold mb-1">↑ 15%</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-[2rem] p-6 bg-soft-green border border-emerald-100 dark:bg-slate-800/40 dark:border-slate-800">
+<p class="text-slate-600 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Best Streak</p>
+<div class="flex items-end gap-1">
+<p class="text-slate-900 dark:text-white text-3xl font-extrabold">21</p>
+<span class="text-primary text-xs font-bold mb-1">Days</span>
+</div>
+</div>
+</div>
+<div class="px-6 pt-4 flex items-center justify-between">
+<h3 class="text-slate-900 dark:text-white tracking-tight text-xl font-extrabold">Consistency</h3>
+<span class="text-xs font-bold text-accent-blue cursor-pointer">View all</span>
+</div>
+<div class="flex gap-3 p-4 px-6 overflow-x-auto no-scrollbar">
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-slate-900 dark:bg-white px-5">
+<span class="text-white dark:text-slate-900 text-xs font-bold">All Habits</span>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-5 shadow-sm">
+<span class="text-slate-600 dark:text-slate-300 text-xs font-bold">Health</span>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-5 shadow-sm">
+<span class="text-slate-600 dark:text-slate-300 text-xs font-bold">Productivity</span>
+</div>
+</div>
+<div class="flex flex-col gap-4 px-4 pb-12">
+<div class="flex items-center justify-between p-5 bg-white dark:bg-slate-900 rounded-[2rem] shadow-sm border border-slate-50 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-2xl bg-sky-50 dark:bg-sky-900/30 flex items-center justify-center text-sky-500">
+<span class="material-symbols-outlined text-2xl">water_drop</span>
+</div>
+<div>
+<p class="font-extrabold text-slate-900 dark:text-white">Hydration</p>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">5 of 7 days</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-1.5 w-16 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-accent-blue w-[71%] rounded-full"></div>
+</div>
+<p class="text-accent-blue text-sm font-black">71%</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-5 bg-white dark:bg-slate-900 rounded-[2rem] shadow-sm border border-slate-50 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-2xl bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">self_improvement</span>
+</div>
+<div>
+<p class="font-extrabold text-slate-900 dark:text-white">Mindfulness</p>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">7 of 7 days</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-1.5 w-16 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[100%] rounded-full"></div>
+</div>
+<p class="text-primary text-sm font-black">100%</p>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

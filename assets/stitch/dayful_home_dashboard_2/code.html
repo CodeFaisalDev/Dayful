@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dayful Home Dashboard - Dark Mode</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00F2FF",
+                        "dark-bg": "#121212",
+                        "card-bg": "#1E1E1E",
+                        "text-main": "#F5F5F7",
+                        "text-sub": "#A1A1AA",
+                        "glow-blue": "rgba(0, 242, 255, 0.15)",
+                        "glow-green": "rgba(52, 211, 153, 0.15)",
+                        "glow-yellow": "rgba(251, 191, 36, 0.15)",
+                        "glow-purple": "rgba(168, 85, 247, 0.15)",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "card-lg": "2.5rem",
+                        "pill": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+            background-color: #121212;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+        .glow-border-blue { border: 1px solid rgba(0, 242, 255, 0.3); box-shadow: 0 0 15px rgba(0, 242, 255, 0.05); }
+        .glow-border-green { border: 1px solid rgba(52, 211, 153, 0.3); box-shadow: 0 0 15px rgba(52, 211, 153, 0.05); }
+        .glow-border-yellow { border: 1px solid rgba(251, 191, 36, 0.3); box-shadow: 0 0 15px rgba(251, 191, 36, 0.05); }
+        .nav-blur {
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-dark-bg font-display text-text-main antialiased">
+<div class="relative flex min-h-screen w-full flex-col max-w-[430px] mx-auto overflow-x-hidden pb-32">
+<header class="px-8 pt-16 pb-8">
+<div class="flex justify-between items-start">
+<div>
+<h1 class="text-4xl font-extrabold tracking-tight text-text-main">Hello, Faisal 👋</h1>
+<div class="mt-2 space-y-1">
+<p class="text-text-sub text-sm font-semibold uppercase tracking-wider">Friday, October 27</p>
+<p class="text-primary/80 text-sm italic font-medium">"Small steps lead to big journeys."</p>
+</div>
+</div>
+<button class="w-12 h-12 rounded-full bg-card-bg soft-shadow flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-text-main">notifications</span>
+</button>
+</div>
+</header>
+<section class="px-8 mb-10">
+<div class="bg-card-bg rounded-card-lg p-8 soft-shadow border border-white/5 flex items-center justify-between">
+<div>
+<h2 class="text-xl font-bold mb-1">Daily Progress</h2>
+<p class="text-text-sub text-sm">You've completed <span class="text-primary font-bold">4 out of 7</span><br/>tasks for today!</p>
+</div>
+<div class="relative w-24 h-24">
+<svg class="progress-ring w-24 h-24">
+<circle class="text-white/5" cx="48" cy="48" fill="transparent" r="38" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="48" cy="48" fill="transparent" r="38" stroke="currentColor" stroke-dasharray="238.76" stroke-dashoffset="102.32" stroke-linecap="round" stroke-width="8" style="filter: drop-shadow(0 0 4px rgba(0, 242, 255, 0.5));"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center text-lg font-bold text-primary">
+                    57%
+                </div>
+</div>
+</div>
+</section>
+<section class="px-8 space-y-6">
+<div class="flex justify-between items-center px-2">
+<h3 class="text-lg font-bold">Today's Routine</h3>
+<button class="text-primary text-sm font-bold">View History</button>
+</div>
+<div class="bg-card-bg rounded-card-lg p-6 flex items-center justify-between glow-border-blue">
+<div class="flex items-center gap-5">
+<div class="w-16 h-16 bg-[#252525] rounded-3xl flex items-center justify-center text-3xl shadow-inner">
+                    💧
+                </div>
+<div>
+<h4 class="font-bold text-lg">Drink Water</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs font-semibold text-primary/90 px-2 py-1 bg-primary/10 rounded-full">500ml</span>
+<span class="text-xs text-text-sub font-medium">Morning</span>
+</div>
+</div>
+</div>
+<button class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center border border-primary/30 text-primary">
+<span class="material-symbols-outlined text-2xl font-bold">check</span>
+</button>
+</div>
+<div class="bg-card-bg rounded-card-lg p-6 flex items-center justify-between glow-border-green">
+<div class="flex items-center gap-5">
+<div class="w-16 h-16 bg-[#252525] rounded-3xl flex items-center justify-center text-3xl shadow-inner">
+                    🧘‍♂️
+                </div>
+<div>
+<h4 class="font-bold text-lg">10 min stretch</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs font-semibold text-emerald-400 px-2 py-1 bg-emerald-400/10 rounded-full">10 min</span>
+<span class="text-xs text-text-sub font-medium">Anytime</span>
+</div>
+</div>
+</div>
+<button class="w-10 h-10 bg-emerald-400/10 rounded-full flex items-center justify-center border border-emerald-400/30 text-emerald-400">
+<span class="material-symbols-outlined text-2xl font-bold">play_arrow</span>
+</button>
+</div>
+<div class="bg-card-bg rounded-card-lg p-6 flex items-center justify-between glow-border-yellow">
+<div class="flex items-center gap-5">
+<div class="w-16 h-16 bg-[#252525] rounded-3xl flex items-center justify-center text-3xl shadow-inner">
+                    📖
+                </div>
+<div>
+<h4 class="font-bold text-lg">Read 5 pages</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs font-semibold text-amber-400 px-2 py-1 bg-amber-400/10 rounded-full">Book</span>
+<span class="text-xs text-text-sub font-medium">Evening</span>
+</div>
+</div>
+</div>
+<button class="w-10 h-10 bg-amber-400/10 rounded-full flex items-center justify-center border border-amber-400/30 text-amber-400">
+<span class="material-symbols-outlined text-2xl font-bold">play_arrow</span>
+</button>
+</div>
+</section>
+<div class="mt-12 mb-8 flex flex-col items-center">
+<div class="w-40 h-40 bg-purple-500/10 rounded-full flex items-center justify-center relative">
+<div class="absolute inset-0 bg-white/5 backdrop-blur-sm rounded-full scale-110 border border-white/5"></div>
+<svg class="w-24 h-24 relative z-10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 100 100">
+<path class="text-text-main" d="M30 45 Q 50 65, 70 45"></path>
+<circle class="text-text-main" cx="35" cy="35" fill="currentColor" r="3"></circle>
+<circle class="text-text-main" cx="65" cy="35" fill="currentColor" r="3"></circle>
+<path class="text-primary/40" d="M10 20 Q 20 10, 40 15 T 90 20"></path>
+</svg>
+</div>
+<p class="mt-4 text-text-sub text-xs font-bold uppercase tracking-widest">Feeling mindful today</p>
+</div>
+<div class="px-8 mt-4">
+<div class="bg-card-bg border border-white/5 rounded-2xl py-3 px-6 text-center">
+<p class="text-[10px] text-text-sub font-medium">SPONSORED: NEW WELLNESS RETREATS NEAR YOU • <span class="text-primary">LEARN MORE</span></p>
+</div>
+</div>
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] px-8 pb-10 pt-4 bg-gradient-to-t from-dark-bg via-dark-bg/95 to-transparent">
+<div class="nav-blur border border-white/10 rounded-pill h-20 soft-shadow flex items-center justify-around px-2">
+<button class="flex items-center justify-center w-14 h-14 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined filled">home</span>
+</button>
+<button class="flex items-center justify-center w-14 h-14 rounded-full text-text-sub hover:text-white">
+<span class="material-symbols-outlined">analytics</span>
+</button>
+<button class="flex items-center justify-center w-14 h-14 rounded-full text-text-sub hover:text-white">
+<span class="material-symbols-outlined">explore</span>
+</button>
+<button class="flex items-center justify-center w-14 h-14 rounded-full text-text-sub hover:text-white">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add New Routine Task - Dayful</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "soft-blue": "#E3F2FD",
+                        "soft-pink": "#FCE4EC",
+                        "soft-green": "#E8F5E9",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "3xl": "1.5rem",
+                        "4xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .bubbly-card {
+            @apply rounded-[2.5rem] transition-all active:scale-95 cursor-pointer;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#D1E9F6] dark:bg-background-dark min-h-screen flex justify-center p-4">
+<div class="relative flex h-full min-h-[844px] w-full max-w-[430px] flex-col bg-white dark:bg-slate-900 overflow-x-hidden shadow-2xl rounded-[3rem] border-[8px] border-white/50">
+<div class="flex items-center p-6 pb-2 justify-between sticky top-0 z-10 bg-white/80 backdrop-blur-md dark:bg-slate-900/80">
+<div class="text-[#0d141b] dark:text-white flex size-10 shrink-0 items-center justify-center cursor-pointer bg-slate-100 dark:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined text-xl">close</span>
+</div>
+<h2 class="text-[#0d141b] dark:text-white text-lg font-extrabold leading-tight tracking-tight flex-1 text-center">New Habit</h2>
+<div class="flex w-10 items-center justify-end">
+<span class="material-symbols-outlined text-primary">more_horiz</span>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto px-6">
+<div class="py-8">
+<h1 class="text-[#0d141b] dark:text-white tracking-tight text-[32px] font-extrabold leading-tight text-left">What's the plan?</h1>
+<p class="text-[#4c739a] dark:text-slate-400 text-base mt-2 font-medium">Keep it simple, keep it steady.</p>
+</div>
+<div class="mb-8">
+<div class="relative">
+<input class="w-full rounded-3xl text-[#0d141b] dark:text-white focus:outline-0 focus:ring-4 focus:ring-primary/10 border-none bg-slate-100 dark:bg-slate-800 h-20 placeholder:text-slate-400 p-6 text-xl font-bold leading-normal" placeholder="Go for a run..." value=""/>
+</div>
+</div>
+<div class="mb-10">
+<p class="text-sm font-bold uppercase tracking-widest text-[#4c739a] mb-5 ml-1">Category</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bubbly-card bg-slate-900 dark:bg-slate-800 p-5 flex flex-col justify-between aspect-square">
+<div class="size-10 bg-white/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white">self_improvement</span>
+</div>
+<div>
+<p class="text-white font-bold text-lg">Mindfulness</p>
+<p class="text-white/60 text-xs font-bold mt-1">15 min</p>
+</div>
+</div>
+<div class="bubbly-card bg-soft-blue p-5 flex flex-col justify-between aspect-square">
+<div class="size-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-blue-500">fitness_center</span>
+</div>
+<div>
+<p class="text-slate-800 font-bold text-lg">Workout</p>
+<p class="text-slate-500 text-xs font-bold mt-1">45 min</p>
+</div>
+</div>
+<div class="bubbly-card bg-soft-green p-5 flex flex-col justify-between aspect-square">
+<div class="size-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-emerald-600">nutrition</span>
+</div>
+<div>
+<p class="text-slate-800 font-bold text-lg">Health</p>
+<p class="text-slate-500 text-xs font-bold mt-1">Daily</p>
+</div>
+</div>
+<div class="bubbly-card bg-soft-pink p-5 flex flex-col justify-between aspect-square">
+<div class="size-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-rose-400">favorite</span>
+</div>
+<div>
+<p class="text-slate-800 font-bold text-lg">Self Care</p>
+<p class="text-slate-500 text-xs font-bold mt-1">10 min</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-10">
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-[2rem] p-2">
+<div class="flex items-center gap-4 px-5 py-4 justify-between border-b border-white dark:border-slate-700">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-2xl bg-white dark:bg-slate-700 shadow-sm shrink-0 size-12">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="text-[#0d141b] dark:text-white text-base font-bold">Set Time</p>
+<p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Morning</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-primary text-lg font-black leading-normal">08:00</p>
+</div>
+</div>
+<div class="flex items-center gap-4 px-5 py-4 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-slate-600 dark:text-white flex items-center justify-center rounded-2xl bg-white dark:bg-slate-700 shadow-sm shrink-0 size-12">
+<span class="material-symbols-outlined">event_repeat</span>
+</div>
+<div>
+<p class="text-[#0d141b] dark:text-white text-base font-bold">Repeat</p>
+<p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Every Day</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="w-14 h-8 bg-primary rounded-full relative flex items-center px-1">
+<div class="w-6 h-6 bg-white rounded-full shadow-sm absolute right-1"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 pb-10 bg-slate-100 dark:bg-slate-800/80 backdrop-blur-lg">
+<button class="w-full bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-extrabold text-lg py-6 rounded-full shadow-2xl shadow-black/5 transition-all active:scale-95 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined font-bold">add</span>
+                Create Routine
+            </button>
+<p class="text-center text-[#4c739a] dark:text-slate-500 text-xs mt-6 font-bold uppercase tracking-widest">Building better habits together</p>
+</div>
+</div>
+
+</body></html>
